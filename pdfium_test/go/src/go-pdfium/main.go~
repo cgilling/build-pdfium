@@ -1,0 +1,18 @@
+package main
+
+/*
+#cgo CFLAGS: -I/pdfium/public
+#cgo LDFLAGS: -L/pdfium/out/Release/obj -L/pdfium/out/Release/obj/third_party -lpdfium -lfxcodec -lfpdfdoc -lfpdfapi -lfpdftext -lformfiller -lfxcrt -lfxedit -lfxge -lfx_freetype -ljpeg -lfx_lcms2 -lfx_libopenjpeg -lfx_zlib -lbigint -lfx_agg -ljavascript -lpdfwindow -lfdrm
+#cgo LDFLAGS: -lstdc++ -lc
+
+#include <fpdfview.h>
+*/
+import "C"
+import "fmt"
+
+func init() {
+	C.FPDF_InitLibrary(0)
+}
+
+func main() {
+	f
